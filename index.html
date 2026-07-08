@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="id">
+ <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260708-01-ba9fa57"}');</script><script src="/_sdk/f432b76fb310b513.telemetry_sdk.js" integrity="sha512-9FJQ55EKmmqhyyik8BhrMVfm0+iYYfb8uOlRsjtkxJMEI97qOVEI4PnHohDjQAtvAep0IOEpdQ64eki0sz62ug=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Bahasa Lampung - Anggota Tubuh</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
+  <style>
+        body { font-family: 'DM Sans', sans-serif; }
+        .page { display: none; }
+        .page.active { display: block; }
+        .menu-card { transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; }
+        .menu-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+        .option-btn { transition: all 0.2s; }
+        .option-btn:hover { transform: scale(1.03); }
+        .option-btn.correct { background: #22c55e !important; color: #fff !important; }
+        .option-btn.wrong { background: #ef4444 !important; color: #fff !important; }
+        .bounce { animation: bounce 0.5s; }
+        @keyframes bounce { 0%,100%{ transform:scale(1); } 50%{ transform:scale(1.2); } }
+    </style>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="/_sdk/0179d719c431a79e.data_sdk.js" type="text/javascript" integrity="sha512-OsRvJkI5GkC3MJQcgotQYotpzrMSX415GiKKgvYdxQEEkzD/fdchShO2FMSy0PJr/tiINMXOk5Vl2zAgg6bUiA=="></script>
+  <script src="/_sdk/0b3af1c300e720aa.resizing_sdk.js" type="text/javascript" integrity="sha512-nX1P6oXZmEY5wCI2lUVg3BwKu1cr0yi+ZpXgZ0Yn90vkSwvpmyzBMvOyD6VLJUtBwFI2dSrw1b6OvORxSggw3w=="></script>
+ </head>
+ <body data-template-id="__page-root" class="min-h-screen"><!-- Identity Page -->
+  <div id="page-identity" class="page active">
+   <div class="flex items-center justify-center min-h-screen p-4">
+    <div class="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 text-center">
+     <div class="text-6xl mb-4">
+      👋
+     </div>
+     <h1 data-template-id="identity-title" class="canva-text text-2xl font-bold mb-2"></h1>
+     <p data-template-id="identity-subtitle" class="canva-text mb-6"></p>
+     <form id="identity-form" class="space-y-4 text-left">
+      <div><label data-template-id="label-nama" class="canva-text block font-medium mb-1" for="input-nama"></label> <input id="input-nama" type="text" required class="w-full border-2 border-gray-200 rounded-lg px-4 py-2 focus:border-blue-400 focus:outline-none">
+      </div>
+      <div><label data-template-id="label-kelas" class="canva-text block font-medium mb-1" for="input-kelas"></label> <input id="input-kelas" type="text" required class="w-full border-2 border-gray-200 rounded-lg px-4 py-2 focus:border-blue-400 focus:outline-none">
+      </div><button data-template-id="btn-mulai" type="submit" class="canva-button w-full py-3 rounded-xl font-bold text-lg mt-4"></button>
+     </form>
+    </div>
+   </div>
+  </div><!-- Main Menu -->
+  <div id="page-menu" class="page">
+   <div class="max-w-2xl mx-auto p-6">
+    <div class="text-center mb-8"><img data-template-id="hero-image" class="canva-image w-32 h-32 mx-auto rounded-full object-cover mb-4" loading="lazy">
+     <h2 data-template-id="menu-title" class="canva-text text-2xl font-bold"></h2>
+     <p id="greeting-text" class="text-gray-600 mt-1"></p>
+    </div>
+    <div class="grid grid-cols-2 gap-4"><button onclick="showPage('materi')" class="menu-card bg-amber-100 rounded-2xl p-5 text-center">
+      <div class="text-4xl mb-2">
+       📖
+      </div><span data-template-id="menu-materi" class="canva-text font-bold"></span> </button> <button onclick="showPage('latihan')" class="menu-card bg-green-100 rounded-2xl p-5 text-center">
+      <div class="text-4xl mb-2">
+       ✏️
+      </div><span data-template-id="menu-latihan" class="canva-text font-bold"></span> </button> <button onclick="showPage('kuis')" class="menu-card bg-blue-100 rounded-2xl p-5 text-center">
+      <div class="text-4xl mb-2">
+       ❓
+      </div><span data-template-id="menu-kuis" class="canva-text font-bold"></span> </button> <button onclick="showPage('permainan')" class="menu-card bg-pink-100 rounded-2xl p-5 text-center">
+      <div class="text-4xl mb-2">
+       🎮
+      </div><span data-template-id="menu-permainan" class="canva-text font-bold"></span> </button> <button onclick="showPage('refleksi')" class="menu-card bg-purple-100 rounded-2xl p-5 text-center col-span-2">
+      <div class="text-4xl mb-2">
+       🪞
+      </div><span data-template-id="menu-refleksi" class="canva-text font-bold"></span> </button>
+    </div>
+   </div>
+  </div><!-- Materi -->
+  <div id="page-materi" class="page">
+   <div class="max-w-2xl mx-auto p-6"><button onclick="showPage('menu')" class="mb-4 text-blue-600 font-medium">← Kembali</button>
+    <h2 data-template-id="materi-title" class="canva-text text-xl font-bold mb-4 text-center"></h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4" id="materi-grid"></div>
+   </div>
+  </div><!-- Latihan -->
+  <div id="page-latihan" class="page">
+   <div class="max-w-2xl mx-auto p-6"><button onclick="showPage('menu')" class="mb-4 text-blue-600 font-medium">← Kembali</button>
+    <h2 data-template-id="latihan-title" class="canva-text text-xl font-bold mb-4 text-center"></h2>
+    <p data-template-id="latihan-instruction" class="canva-text text-center mb-4"></p>
+    <div id="latihan-content"></div>
+   </div>
+  </div><!-- Kuis -->
+  <div id="page-kuis" class="page">
+   <div class="max-w-2xl mx-auto p-6"><button onclick="showPage('menu')" class="mb-4 text-blue-600 font-medium">← Kembali</button>
+    <h2 data-template-id="kuis-title" class="canva-text text-xl font-bold mb-4 text-center"></h2>
+    <div id="kuis-content"></div>
+    <div id="kuis-result" class="hidden text-center mt-6 p-6 bg-white rounded-2xl shadow"></div>
+   </div>
+  </div><!-- Permainan -->
+  <div id="page-permainan" class="page">
+   <div class="max-w-2xl mx-auto p-6"><button onclick="showPage('menu')" class="mb-4 text-blue-600 font-medium">← Kembali</button>
+    <h2 data-template-id="permainan-title" class="canva-text text-xl font-bold mb-4 text-center"></h2>
+    <p data-template-id="permainan-instruction" class="canva-text text-center mb-4"></p>
+    <div id="permainan-content" class="text-center"></div>
+   </div>
+  </div><!-- Refleksi -->
+  <div id="page-refleksi" class="page">
+   <div class="max-w-2xl mx-auto p-6"><button onclick="showPage('menu')" class="mb-4 text-blue-600 font-medium">← Kembali</button>
+    <h2 data-template-id="refleksi-title" class="canva-text text-xl font-bold mb-4 text-center"></h2>
+    <p data-template-id="refleksi-question" class="canva-text text-center mb-6"></p>
+    <div class="flex justify-center gap-6 text-5xl" id="refleksi-emojis"><button onclick="selectRefleksi(this,'😊')" class="hover:scale-125 transition-transform">😊</button> <button onclick="selectRefleksi(this,'😐')" class="hover:scale-125 transition-transform">😐</button> <button onclick="selectRefleksi(this,'😢')" class="hover:scale-125 transition-transform">😢</button>
+    </div>
+    <div id="refleksi-result" class="hidden text-center mt-6 p-4 bg-white rounded-xl shadow"></div>
+   </div>
+  </div>
+  <script src="/_sdk/0754dd8df9d57b49.editing_sdk.js" integrity="sha512-yvKoMK4Ofz067LVljR1M05H+IiYMlPeB85tq/r60nkBNxvzYXf2rquTC3ObXq4eufSZVQ6Z6qWfK1GFj0HTO4w=="></script>
+  <script>
+    // Data anggota tubuh
+    const bodyParts = [
+        { id:'mata', indo:'Mata', lampung:'Mata', emoji:'👁️' },
+        { id:'hidung', indo:'Hidung', lampung:'Irung', emoji:'👃' },
+        { id:'mulut', indo:'Mulut', lampung:'Cunguk', emoji:'👄' },
+        { id:'telinga', indo:'Telinga', lampung:'Cuping', emoji:'👂' },
+        { id:'tangan', indo:'Tangan', lampung:'Tangan', emoji:'✋' },
+        { id:'kaki', indo:'Kaki', lampung:'Kukut', emoji:'🦶' },
+        { id:'kepala', indo:'Kepala', lampung:'Hulu', emoji:'🧠' },
+        { id:'rambut', indo:'Rambut', lampung:'Buok', emoji:'💇' },
+    ];
+
+    let studentName = '';
+    let studentClass = '';
+
+    // Identity form
+    document.getElementById('identity-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        studentName = document.getElementById('input-nama').value.trim();
+        studentClass = document.getElementById('input-kelas').value.trim();
+        document.getElementById('greeting-text').textContent = `Halo, ${studentName}! (Kelas ${studentClass})`;
+        showPage('menu');
+    });
+
+    function showPage(name) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        document.getElementById('page-' + name).classList.add('active');
+        if (name === 'materi') renderMateri();
+        if (name === 'latihan') renderLatihan();
+        if (name === 'kuis') renderKuis();
+        if (name === 'permainan') renderPermainan();
+    }
+
+    // Materi
+    function renderMateri() {
+        const grid = document.getElementById('materi-grid');
+        grid.innerHTML = bodyParts.map(b => `
+            <div class="bg-white rounded-xl p-4 shadow text-center">
+                <div class="text-4xl mb-2">${b.emoji}</div>
+                <div class="font-bold text-gray-800">${b.indo}</div>
+                <div class="text-sm text-purple-600 font-medium">${b.lampung}</div>
+            </div>
+        `).join('');
+    }
+
+    // Latihan - matching
+    function renderLatihan() {
+        const container = document.getElementById('latihan-content');
+        const shuffled = [...bodyParts].sort(() => Math.random() - 0.5).slice(0, 5);
+        const answers = [...shuffled].sort(() => Math.random() - 0.5);
+        let matched = 0;
+        let selected = null;
+
+        container.innerHTML = `
+            <div class="grid grid-cols-2 gap-4">
+                <div class="space-y-3" id="lat-left"></div>
+                <div class="space-y-3" id="lat-right"></div>
+            </div>
+            <div id="lat-feedback" class="text-center mt-4 font-bold"></div>
+        `;
+
+        const left = container.querySelector('#lat-left');
+        const right = container.querySelector('#lat-right');
+
+        shuffled.forEach((b, i) => {
+            left.innerHTML += `<button class="w-full bg-amber-50 border-2 border-amber-200 rounded-lg p-3 font-medium text-left option-btn" data-id="${b.id}" data-side="left">${b.emoji} ${b.indo}</button>`;
+        });
+        answers.forEach((b, i) => {
+            right.innerHTML += `<button class="w-full bg-blue-50 border-2 border-blue-200 rounded-lg p-3 font-medium text-left option-btn" data-id="${b.id}" data-side="right">${b.lampung}</button>`;
+        });
+
+        container.addEventListener('click', function(e) {
+            const btn = e.target.closest('[data-id]');
+            if (!btn || btn.disabled) return;
+            if (!selected) {
+                selected = btn;
+                btn.classList.add('ring-2','ring-blue-500');
+            } else {
+                if (selected.dataset.side === btn.dataset.side) {
+                    selected.classList.remove('ring-2','ring-blue-500');
+                    selected = btn;
+                    btn.classList.add('ring-2','ring-blue-500');
+                    return;
+                }
+                if (selected.dataset.id === btn.dataset.id) {
+                    selected.classList.add('correct'); btn.classList.add('correct');
+                    selected.disabled = true; btn.disabled = true;
+                    matched++;
+                    if (matched === shuffled.length) {
+                        document.getElementById('lat-feedback').textContent = '🎉 Hebat! Semua benar!';
+                    }
+                } else {
+                    selected.classList.add('wrong'); btn.classList.add('wrong');
+                    setTimeout(() => { selected.classList.remove('wrong','ring-2','ring-blue-500'); btn.classList.remove('wrong'); }, 600);
+                }
+                selected.classList.remove('ring-2','ring-blue-500');
+                selected = null;
+            }
+        });
+    }
+
+    // Kuis
+    let kuisData, kuisIdx, kuisScore;
+    function renderKuis() {
+        kuisData = [...bodyParts].sort(() => Math.random() - 0.5).slice(0, 5);
+        kuisIdx = 0; kuisScore = 0;
+        document.getElementById('kuis-result').classList.add('hidden');
+        showKuisQuestion();
+    }
+    function showKuisQuestion() {
+        const container = document.getElementById('kuis-content');
+        if (kuisIdx >= kuisData.length) {
+            container.innerHTML = '';
+            const res = document.getElementById('kuis-result');
+            res.classList.remove('hidden');
+            res.innerHTML = `<div class="text-5xl mb-3">🏆</div><p class="text-xl font-bold">Skor: ${kuisScore}/${kuisData.length}</p><p class="mt-2">${kuisScore >= 4 ? 'Luar biasa!' : kuisScore >= 3 ? 'Bagus!' : 'Ayo belajar lagi!'}</p>`;
+            return;
+        }
+        const q = kuisData[kuisIdx];
+        const options = [q.lampung];
+        while (options.length < 3) {
+            const r = bodyParts[Math.floor(Math.random() * bodyParts.length)].lampung;
+            if (!options.includes(r)) options.push(r);
+        }
+        options.sort(() => Math.random() - 0.5);
+        container.innerHTML = `
+            <div class="bg-white rounded-xl p-6 shadow text-center">
+                <div class="text-5xl mb-3">${q.emoji}</div>
+                <p class="font-bold mb-1">Soal ${kuisIdx+1}/${kuisData.length}</p>
+                <p class="mb-4">Apa bahasa Lampung dari <strong>"${q.indo}"</strong>?</p>
+                <div class="space-y-3">${options.map(o => `<button class="option-btn w-full bg-gray-100 border-2 border-gray-200 rounded-lg p-3 font-medium" onclick="answerKuis(this,'${o}','${q.lampung}')">${o}</button>`).join('')}</div>
+            </div>
+        `;
+    }
+    function answerKuis(btn, ans, correct) {
+        const btns = btn.parentElement.querySelectorAll('button');
+        btns.forEach(b => b.disabled = true);
+        if (ans === correct) { btn.classList.add('correct'); kuisScore++; }
+        else { btn.classList.add('wrong'); btns.forEach(b => { if (b.textContent === correct) b.classList.add('correct'); }); }
+        setTimeout(() => { kuisIdx++; showKuisQuestion(); }, 1000);
+    }
+
+    // Permainan - Tebak emoji
+    let gameScore, gameRound, gameData;
+    function renderPermainan() {
+        gameData = [...bodyParts].sort(() => Math.random() - 0.5);
+        gameScore = 0; gameRound = 0;
+        showGameRound();
+    }
+    function showGameRound() {
+        const container = document.getElementById('permainan-content');
+        if (gameRound >= 5) {
+            container.innerHTML = `<div class="text-5xl mb-3">🎊</div><p class="text-xl font-bold">Skor: ${gameScore}/5</p><p class="mt-2">${gameScore>=4?'Keren sekali!':'Ayo coba lagi!'}</p><button onclick="renderPermainan()" class="mt-4 bg-pink-500 text-white px-6 py-2 rounded-lg font-bold">Main Lagi</button>`;
+            return;
+        }
+        const target = gameData[gameRound];
+        const emojis = [target];
+        while (emojis.length < 4) {
+            const r = bodyParts[Math.floor(Math.random() * bodyParts.length)];
+            if (!emojis.find(e => e.id === r.id)) emojis.push(r);
+        }
+        emojis.sort(() => Math.random() - 0.5);
+        container.innerHTML = `
+            <p class="text-lg font-bold mb-4">Temukan: <span class="text-purple-600">"${target.lampung}"</span></p>
+            <div class="grid grid-cols-2 gap-4">${emojis.map(e => `<button class="text-5xl bg-white rounded-xl p-6 shadow hover:scale-110 transition-transform" onclick="answerGame(this,'${e.id}','${target.id}')">${e.emoji}</button>`).join('')}</div>
+            <p class="mt-3 text-gray-500">Ronde ${gameRound+1}/5</p>
+        `;
+    }
+    function answerGame(btn, ans, correct) {
+        const btns = btn.parentElement.querySelectorAll('button');
+        btns.forEach(b => b.disabled = true);
+        if (ans === correct) { btn.classList.add('bounce'); gameScore++; }
+        else { btn.style.opacity = '0.4'; btns.forEach(b => { if (b.getAttribute('onclick').includes(correct)) b.classList.add('bounce'); }); }
+        setTimeout(() => { gameRound++; showGameRound(); }, 800);
+    }
+
+    // Refleksi
+    function selectRefleksi(btn, emoji) {
+        const res = document.getElementById('refleksi-result');
+        res.classList.remove('hidden');
+        const messages = { '😊': 'Senang kamu sudah paham! Terus belajar ya!', '😐': 'Tidak apa-apa, ayo ulangi materinya!', '😢': 'Jangan sedih, kamu pasti bisa! Coba lagi ya!' };
+        res.innerHTML = `<div class="text-4xl mb-2">${emoji}</div><p class="font-medium">${messages[emoji]}</p>`;
+        document.querySelectorAll('#refleksi-emojis button').forEach(b => b.style.opacity = '0.4');
+        btn.style.opacity = '1';
+    }
+</script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a17bee862041fd10',t:'MTc4MzQ4MDYwMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
